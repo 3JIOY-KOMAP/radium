@@ -17,3 +17,15 @@ function itemOff() {
         elem.style.opacity = '1';
     };
 }
+
+document.addEventListener('keyup', () => {
+    let text = document.querySelector('.main__titles');
+    if (event.keyCode == '32') {
+        if (getComputedStyle(text).display == 'flex') {
+            text.style.display = 'none'
+        }
+        else {
+            text.style.display = 'flex'
+        }
+    }
+})
